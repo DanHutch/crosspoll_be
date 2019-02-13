@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/environment.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/application.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/application.rb": [
         1,
         null,
         1,
@@ -45,13 +45,13 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/boot.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/boot.rb": [
         1,
         null,
         1,
         1
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/environments/test.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/environments/test.rb": [
         1,
         null,
         null,
@@ -99,7 +99,7 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/application_controller_renderer.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -109,7 +109,7 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/backtrace_silencers.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -118,7 +118,7 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/cors.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/cors.rb": [
         null,
         null,
         null,
@@ -136,13 +136,13 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/filter_parameter_logging.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/inflections.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -160,13 +160,13 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/mime_types.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/initializers/wrap_parameters.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -182,12 +182,12 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/config/routes.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/config/routes.rb": [
         1,
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/app/models/item.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/app/models/item.rb": [
         1,
         1,
         1,
@@ -197,12 +197,12 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/app/models/application_record.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/app/models/user.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/app/models/user.rb": [
         1,
         1,
         1,
@@ -222,12 +222,10 @@
         1,
         null,
         1,
-        0,
-        null,
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/app/models/vendor_item.rb": [
+      "/Users/millstone/Turing/4Module/crosspoll_be/app/models/vendor_item.rb": [
         1,
         1,
         1,
@@ -240,6 +238,6 @@
         null
       ]
     },
-    "timestamp": 1550084185
+    "timestamp": 1550089774
   }
 }

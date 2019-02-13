@@ -16,4 +16,6 @@ class User < ApplicationRecord
 
   validates_uniqueness_of :email
 
+  enum account_type: [:vendor, :customer]
+
 end
