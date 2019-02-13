@@ -13,6 +13,7 @@ class User < ApplicationRecord
                         :lat,
                         :long,
                         :bio
+
   validates_uniqueness_of :email
 
 end

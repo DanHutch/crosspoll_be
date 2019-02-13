@@ -202,37 +202,13 @@
         1,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/spec/models/user_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
       "/Users/hutchy/turing/4module/projects/crosspoll_be/app/models/user.rb": [
         1,
         1,
         1,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -251,24 +227,6 @@
         null,
         null
       ],
-      "/Users/hutchy/turing/4module/projects/crosspoll_be/spec/models/vendor_item_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
       "/Users/hutchy/turing/4module/projects/crosspoll_be/app/models/vendor_item.rb": [
         1,
         1,
@@ -282,6 +240,6 @@
         null
       ]
     },
-    "timestamp": 1550083758
+    "timestamp": 1550084185
   }
 }
