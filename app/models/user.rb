@@ -14,4 +14,5 @@ class User < ApplicationRecord
                         :long,
                         :bio
   validates_uniqueness_of :email
+
 end

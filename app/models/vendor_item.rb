@@ -7,5 +7,4 @@ class VendorItem < ApplicationRecord
                         :price,
                         :unit,
                         :description
-
 end
