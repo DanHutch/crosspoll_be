@@ -10,5 +10,4 @@ before_script:
 - bundle exec rake db:{drop,create,migrate,seed}
 
 script:
- — bundle install
- — bundle exec rspec
+— bundle exec rspec
