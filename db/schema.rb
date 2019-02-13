@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_02_13_002023) do
     t.string "state"
     t.integer "zip"
     t.string "email"
-    t.integer "phone"
+    t.bigint "phone"
     t.string "img_url"
     t.float "lat"
     t.float "long"

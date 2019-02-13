@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :state
       t.integer :zip
       t.string :email
-      t.integer :phone
+      t.bigint :phone
       t.string :img_url
       t.float :lat
       t.float :long
