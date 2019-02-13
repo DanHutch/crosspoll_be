@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-13T15:51:51-07:00">2019-02-13T15:51:51-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-02-13T16:57:15-07:00">2019-02-13T16:57:15-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -24,16 +24,16 @@
     (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="yellow">
-         1.0
+       <span class="green">
+         2.35
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>16</b> files in total.
-    <b>53</b> relevant lines. 
-    <span class="green"><b>53</b> lines covered</span> and
+    <b>19</b> files in total.
+    <b>66</b> relevant lines. 
+    <span class="green"><b>66</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -49,6 +49,26 @@
       </tr>
     </thead>
     <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#d37efd44bccfc2723337e0355c43015426ee1c41" class="src_link" title="app/controllers/api/v1/vendors_controller.rb">app/controllers/api/v1/vendors_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#e9deb1c81523b34cb0863a223b2414e9ca2664b2" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
       
       <tr>
         <td class="strong"><a href="#b8dd49cc7a9389f9c977188147cb97fd7df53072" class="src_link" title="app/models/application_record.rb">app/models/application_record.rb</a></td>
@@ -88,6 +108,16 @@
         <td>4</td>
         <td>0</td>
         <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#ff00b61a95543b302fb033b1b85c7687812c74be" class="src_link" title="app/serializers/vendor_serializer.rb">app/serializers/vendor_serializer.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>22</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>15.7</td>
       </tr>
       
       <tr>
@@ -197,15 +227,15 @@
         <td>2</td>
         <td>2</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#f95e3b76453a7f820d6353156c7e4f1f5cbb1650" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>1</td>
-        <td>1</td>
+        <td>10</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -225,6 +255,98 @@
       </div>
     
       <div class="source_files">
+      
+        <div class="source_table" id="d37efd44bccfc2723337e0355c43015426ee1c41">
+  <div class="header">
+    <h3>app/controllers/api/v1/vendors_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::VendorsController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def index</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  render json: VendorSerializer.new(User.where(&#39;account_type = ?&#39;, 0))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="e9deb1c81523b34cb0863a223b2414e9ca2664b2">
+  <div class="header">
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApplicationController &lt; ActionController::API</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="b8dd49cc7a9389f9c977188147cb97fd7df53072">
   <div class="header">
@@ -350,100 +472,100 @@
           <code class="ruby">class User &lt; ApplicationRecord</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="2">
           
-          <code class="ruby">  has_many :vendor_items</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
+          <code class="ruby">  has_many :vendor_items</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">  has_many :items, through: :vendor_items</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates_presence_of :name,</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">                        :account_type,</code>
+          <code class="ruby">  validates :email, uniqueness: true, presence: true</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">                        :address,</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">                        :city,</code>
+          <code class="ruby">  validates_presence_of :name,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">                        :state,</code>
+          <code class="ruby">                        :account_type,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">                        :zip,</code>
+          <code class="ruby">                        :address,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">                        :email,</code>
+          <code class="ruby">                        :city,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">                        :phone,</code>
+          <code class="ruby">                        :state,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                        :lat,</code>
+          <code class="ruby">                        :zip,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">                        :long,</code>
+          <code class="ruby">                        :phone,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">                        :bio</code>
+          <code class="ruby">                        :lat,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">                        :long,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">  validates_uniqueness_of :email</code>
+          
+          <code class="ruby">                        :bio</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
@@ -544,6 +666,157 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="ff00b61a95543b302fb033b1b85c7687812c74be">
+  <div class="header">
+    <h3>app/serializers/vendor_serializer.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class VendorSerializer</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include FastJsonapi::ObjectSerializer</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attributes  :name,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">              :account_type,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">              :address,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">              :city,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">              :state,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">              :zip,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">              :email,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">              :phone,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">              :lat,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">              :long,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">              :bio,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">              :img_url</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attributes :products do |object|</code>
+        </li>
+      
+        <li class="covered" data-hits="10" data-linenumber="18">
+          <span class="hits">10</span>
+          
+          <code class="ruby">    object.vendor_items.map do |vi|</code>
+        </li>
+      
+        <li class="covered" data-hits="80" data-linenumber="19">
+          <span class="hits">80</span>
+          
+          <code class="ruby">      {vi.item.name =&gt; vi}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
@@ -1670,8 +1943,8 @@
           <code class="ruby">ActiveSupport.on_load(:action_controller) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">  wrap_parameters format: [:json]</code>
         </li>
@@ -1722,8 +1995,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1740,10 +2013,52 @@
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  namespace :api do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    namespace :v1 do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get &#39;/vendors&#39;, to: &quot;vendors#index&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
