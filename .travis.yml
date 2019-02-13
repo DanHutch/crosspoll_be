@@ -6,8 +6,6 @@ services:
   - postgresql
   
 before_script:
-  - gem install bundler:2.0.1
-  - bundle
   - bundle exec rake db:{drop,create,migrate,seed}
 
 script:
