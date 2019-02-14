@@ -1,6 +1,9 @@
 class User < ApplicationRecord
+
   has_many :vendor_items
   has_many :items, through: :vendor_items
+
+  validates :email, uniqueness: true, presence: true
 
   validates_presence_of :name,
                         :account_type,
@@ -8,13 +11,10 @@ class User < ApplicationRecord
                         :city,
                         :state,
                         :zip,
-                        :email,
                         :phone,
                         :lat,
                         :long,
                         :bio
-
-  validates_uniqueness_of :email
 
   enum account_type: [:vendor, :customer]
 
