@@ -30,17 +30,27 @@ describe "Vendors API" do
     end
 	end
 
-	# it "can get a single merchant by id" do
-	# 	id = create(:merchant).id
+	it "can get a single user by id" do
+    use_seeds
 
-	# 	get "/api/v1/merchants/#{id}"
+		get "/api/v1/users/1"
 
-	# 	merchant = JSON.parse(response.body)
-
-	# 	expect(response).to be_successful
-	# 	expect(merchant["data"]["id"]).to eq(id.to_s)
-
-	# end
-
-
+    expect(response).to be_successful
+    expect(response.status).to eq(200)
+		user = JSON.parse(response.body)
+    expect(user["data"]).to have_key("id")
+    expect(user["data"]["attributes"]).to have_key("name")
+    expect(user["data"]["attributes"]).to have_key("account_type")
+    expect(user["data"]["attributes"]).to have_key("address")
+    expect(user["data"]["attributes"]).to have_key("city")
+    expect(user["data"]["attributes"]).to have_key("state")
+    expect(user["data"]["attributes"]).to have_key("zip")
+    expect(user["data"]["attributes"]).to have_key("email")
+    expect(user["data"]["attributes"]).to have_key("phone")
+    expect(user["data"]["attributes"]).to have_key("lat")
+    expect(user["data"]["attributes"]).to have_key("long")
+    expect(user["data"]["attributes"]).to have_key("bio")
+    expect(user["data"]["attributes"]).to have_key("img_url")
+    expect(user["data"]["attributes"]).to have_key("products")
+	end
 end

@@ -190,6 +190,8 @@
         null,
         1,
         null,
+        1,
+        null,
         null,
         null,
         null
@@ -280,8 +282,40 @@
         null,
         null,
         null
+      ],
+      "/Users/hutchy/turing/4module/projects/crosspoll_be/app/controllers/api/v1/users_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/hutchy/turing/4module/projects/crosspoll_be/app/serializers/user_serializer.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1550102235
+    "timestamp": 1550104460
   }
 }

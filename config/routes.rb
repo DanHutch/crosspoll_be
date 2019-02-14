@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
       get '/vendors', to: "vendors#index"
 
+      get 'users/:id', to: "users#show"
+
     end
   end
 end
