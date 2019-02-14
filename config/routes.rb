@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
       get 'users/:id', to: "users#show"
 
+      get '/search', to: "search#index"
     end
   end
 end
