@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
       get '/search', to: "search#index"
 
-      post '/sessions', to: "session#create"
+      post '/authentication', to: "authentication#create"
     end
   end
 end
