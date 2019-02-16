@@ -107,7 +107,9 @@ def use_seeds
   phone: 2313414141,
   zip: 80211,
   email: "merchant1@email.com",
-  bio: "A place to get potatoes"
+  bio: "A place to get potatoes",
+  password: "user_1",
+  password_confirmation: "user_1"
 )
 user_2 = User.create(
   name: "Lemon Sisters",
@@ -120,7 +122,9 @@ user_2 = User.create(
   phone: 2313414141,
   zip: 80239,
   email: "regular@email.com",
-  bio: "We Sell Lemons"
+  bio: "We Sell Lemons",
+  password: "user_2",
+  password_confirmation: "user_2"
 )
 user_3 = User.create(
   name: "Raspberry Factory",
@@ -133,7 +137,9 @@ user_3 = User.create(
   phone: 2313414141,
   zip: 80210,
   email: "must_love_dogs@example.com",
-  bio: "Will give you the raspberry"
+  bio: "Will give you the raspberry",
+  password: "user_3",
+  password_confirmation: "user_3"
 )
 user_4 = User.create(
   name: "Apple Orchard",
@@ -146,7 +152,9 @@ user_4 = User.create(
   phone: 2313414141,
   zip: 80220,
   email: "a_boys_best_friend@example.com",
-  bio: "Get Cheap Apples Here"
+  bio: "Get Cheap Apples Here",
+  password: "user_4",
+  password_confirmation: "user_4"
 )
 user_5 = User.create(
   name: "Basil Connection",
@@ -159,7 +167,9 @@ user_5 = User.create(
   phone: 2313414141,
   zip: 80221,
   email: "helter_skelter@example.com",
-  bio: "The WORLDS Freshest Basil"
+  bio: "The WORLDS Freshest Basil",
+  password: "user_5",
+  password_confirmation: "user_5"
 )
 user_6 = User.create(
   name: "Oranges 4 Eva",
@@ -172,7 +182,9 @@ user_6 = User.create(
   phone: 2313414141,
   zip: 80219,
   email: "ruffnbuff@example.com",
-  bio:  "Orange You Glad You Didn't Say Bananas"
+  bio:  "Orange You Glad You Didn't Say Bananas",
+  password: "user_6",
+  password_confirmation: "user_6"
 )
 user_7 = User.create(
   name: "Produce & Such",
@@ -185,7 +197,9 @@ user_7 = User.create(
   phone: 2313414141,
   zip: 80222,
   email: "applepie@example.com",
-  bio:  "Fresh Produce Here"
+  bio:  "Fresh Produce Here",
+  password: "user_7",
+  password_confirmation: "user_7"
 )
 user_8 = User.create(
   name: "Big Bananas",
@@ -198,7 +212,9 @@ user_8 = User.create(
   phone: 2313414141,
   zip: 80206,
   email: "cute_for_you@example.com",
-  bio:  "Our Bananas Are The Biggest"
+  bio:  "Our Bananas Are The Biggest",
+  password: "user_8",
+  password_confirmation: "user_8"
 )
 user_9 = User.create(
   name: "Family Farm",
@@ -211,7 +227,9 @@ user_9 = User.create(
   phone: 2313414141,
   zip: 80211,
   email: "livin_loca889@example.com",
-  bio:  "We Farm Families"
+  bio:  "We Farm Families",
+  password: "user_9",
+  password_confirmation: "user_9"
 )
 user_10 = User.create!(
   name: "Homegrown Food Stuffs",
@@ -224,10 +242,10 @@ user_10 = User.create!(
   phone: 2313414141,
   zip: 80220,
   email: "dream_gal@example.com",
-  bio:  "Food Stuff From Our Farmstead"
+  bio:  "Food Stuff From Our Farmstead",
+  password: "user_10",
+  password_confirmation: "user_10"
 )
-
-
 
   item_1 = Item.create(name: "Berries")
   item_2 = Item.create(name: "Broccoli")

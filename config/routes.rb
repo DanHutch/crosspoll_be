@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
       get '/vendors', to: "vendors#index"
 
-      get 'users/:id', to: "users#show"
+      get '/users/:id', to: "users#show"
 
       get '/search', to: "search#index"
+
+      post '/sessions', to: "session#create"
     end
   end
 end

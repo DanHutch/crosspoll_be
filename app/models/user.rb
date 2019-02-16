@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_secure_password
 
   acts_as_mappable :default_units => :miles,
                    :default_formula => :sphere,
@@ -20,7 +21,8 @@ class User < ApplicationRecord
                         :phone,
                         :lat,
                         :long,
-                        :bio
+                        :bio,
+                        :password
 
   enum account_type: [:vendor, :customer]
 
