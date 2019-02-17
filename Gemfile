@@ -12,6 +12,8 @@ gem 'faraday'
 gem 'rack-cors', require: 'rack/cors'
 gem 'travis'
 gem 'geokit-rails'
+gem 'bcrypt'
+gem 'jwt'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
