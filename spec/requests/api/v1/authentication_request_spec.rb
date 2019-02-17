@@ -55,7 +55,6 @@ describe "Authentication API" do
       expect(message["user"]["id"]).to eq(@user.id)
       expect(message["user"]).to have_key("email")
       expect(message["user"]["email"]).to eq(@user.email)
-binding.pry
     end
   end
 end
