@@ -33,7 +33,7 @@ describe "Authentication API" do
       expect(response.status).to eq(401)
       message = JSON.parse(response.body)
       expect(message).to have_key("Errors")
-      expect(message["Errors"]).to eq("Login Failed: Unauthorized")
+      expect(message["Errors"]).to eq("Login Failed")
     end
 
     it "should authenticate for a valid username/password combo" do

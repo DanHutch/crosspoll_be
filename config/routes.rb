@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       get '/search', to: "search#index"
 
       post '/authentication', to: "authentication#create"
+
+      post '/users/:id/vendor_items', to: "vendor_items#create"
     end
   end
 end
