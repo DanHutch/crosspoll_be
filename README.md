@@ -105,7 +105,7 @@ If done properly, you should now be able to run the local test suite using the c
      ![sample user show response](./readme_imgs/search_response.png)
 
 #### _Authenticated Endpoints_
-The Authentication endpoint responds to successful POST requests with a JSON Web Token. This JWT must be included in the `Authorization` header of requests to all other authenticated endpoints.
+The Authentication endpoint responds to successful POST requests by sending back a JSON Web Token. This JWT must be included in the `Authorization` header of requests to all other authenticated endpoints.
 
 4. **Authentication**
    - Method: `POST`
@@ -147,6 +147,27 @@ The Authentication endpoint responds to successful POST requests with a JSON Web
    - Sample response body: `status: 201`
 
      ![sample vendor_item create response](./readme_imgs/vendor_item_create_response.png)
+
+5. **Updating a Vendor_Item**
+   - Method: `PUT`
+   - URI: `/api/v1/users/:user_id/vendor_items/:vendor_item_id`
+   - This endpoint allows an authenticated user to update one of their existing vendor_items. It updates the vendor_item with the `:vendor_item_id` specified in the URL. The JSON-formatted request body _must_ contain values for _all_ of the require attributes for a vendor_item, in order for the request to be successful.
+   - Sample request:
+     ```
+     PUT /api/v1/users/1/vendor_items/1
+     Content-Type: application/json
+     Accept: application/json
+     Authorization: "Bearer <JSON Web Token>"
+
+     {
+      "price": 13333,
+      "unit": "lb",
+      "description": "lb of very special berries"
+     }
+     ```
+   - Sample response body: `status: 200`
+
+     ![sample vendor_item create response](./readme_imgs/vendor_item_update_response.png)
 
 ### Contributing:
 
