@@ -32,7 +32,7 @@ describe "POST users/:id/vendor_items API" do
   end
 
   it "should create a new vendor_item for an authenticated request" do
-    post "/api/v1/users/1/vendor_items", params: {
+    post "/api/v1/vendor_items", params: {
       item_id: 1,
       price: 900,
       unit: "lb",
@@ -57,7 +57,7 @@ describe "POST users/:id/vendor_items API" do
   end
 
   it "should not create a new vendor_item for an invalid un-authenticated request" do
-    post "/api/v1/users/1/vendor_items", params: {
+    post "/api/v1/vendor_items", params: {
       item_id: 1,
       price: 900,
       unit: "lb",
@@ -70,7 +70,7 @@ describe "POST users/:id/vendor_items API" do
     expect(message).to have_key("Error")
     expect(message["Error"]).to eq("Authentication Failed")
 
-    post "/api/v1/users/1/vendor_items", params: {
+    post "/api/v1/vendor_items", params: {
       item_id: 1,
       price: 900,
       unit: "lb",
@@ -85,7 +85,7 @@ describe "POST users/:id/vendor_items API" do
   end
 
   it "should not create a new vendor_item with missing attributes" do
-    post "/api/v1/users/1/vendor_items", params: {
+    post "/api/v1/vendor_items", params: {
       item_id: 1,
       price: nil,
       unit: "lb",
@@ -97,7 +97,7 @@ describe "POST users/:id/vendor_items API" do
     expect(message).to have_key("Error")
     expect(message["Error"]).to eq("Something went wrong!")
 
-    post "/api/v1/users/1/vendor_items", params: {
+    post "/api/v1/vendor_items", params: {
       item_id: 1,
       price: 1000,
       unit: nil,
@@ -109,7 +109,7 @@ describe "POST users/:id/vendor_items API" do
     expect(message).to have_key("Error")
     expect(message["Error"]).to eq("Something went wrong!")
 
-    post "/api/v1/users/1/vendor_items", params: {
+    post "/api/v1/vendor_items", params: {
       item_id: 1,
       price: 1000,
       unit: "lb",
