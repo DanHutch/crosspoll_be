@@ -105,7 +105,7 @@ If done properly, you should now be able to run the local test suite using the c
      ![sample user show response](./readme_imgs/search_response.png)
 
 #### _Authenticated Endpoints_
-The Authentication endpoint responds to successful POST requests with a JSON Web Token. This JWT must be included in the `"Authentication"` header of requests to all other authenticated endpoints.
+The Authentication endpoint responds to successful POST requests with a JSON Web Token. This JWT must be included in the `Authorization` header of requests to all other authenticated endpoints.
 
 4. **Authentication**
    - Method: `POST`
