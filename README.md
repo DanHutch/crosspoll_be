@@ -1,7 +1,8 @@
-# README
-## CrossPoll BE
+# *CrossPoll BE* - ReadMe
 
-CrossPoll BE is a back-end API, built with Ruby on Rails, that provides endpoints for the front-end app, _From the Farm_, found at https://github.com/lorynmason/from-the-farm and deployed at **PLACEHOLDER**. CrossPoll BE utilizes the GeoKit-Rails gem and plugin to geocode incoming addresses, through the Google GeoCoding API, and to run geographically-based queries on a PostgresQL database. It uses JSON Web Tokens for user authentication. Successful requests return data in FastJSON API formatted responses.
+### Introduction
+
+CrossPoll BE is a back-end API, built with Ruby on Rails, that provides endp*oints for the front-end app, **_From the Farm_**, found at https://github.com/lorynmason/from-the-farm and deployed at **PLACEHOLDER**. CrossPoll BE utilizes the GeoKit-Rails gem and plugin to geocode incoming addresses, through the Google GeoCoding API, and to run geographically-based queries on a PostgresQL database. It uses JSON Web Tokens for user authentication. Successful requests return data in FastJSON API formatted responses.
 This project was built by Melvin Cedeno (GitHub: TheCraftedGem) and Dan Hutchinson (GitHub: DanHutch) as the back-end component for a final cross-pollination project for module 4 of the Back-End Engineering program at the Turing School. It was built in conjunction with front a front-end team of Loryn Mason (GitHub: ) and Mike Duke (GitHub: ).
 
 This project was built using Rails v5.2.2,  Ruby v2.4.1, and PostgresQL v11.1 and comes with all the necessary gems in the Gemfile. After forking and cloning the repo, simply run `bundle` from the command line.
