@@ -148,6 +148,27 @@ The Authentication endpoint responds to successful POST requests with a JSON Web
 
      ![sample vendor_item create response](./readme_imgs/vendor_item_create_response.png)
 
+5. **Updating a Vendor_Item**
+   - Method: `PUT`
+   - URI: `/api/v1/users/:user_id/vendor_items/:vendor_item_id`
+   - This endpoint allows an authenticated user to update one of their existing vendor_items. It updates the vendor_item with the `:vendor_item_id` specified in the URL. The JSON-formatted request body _must_ contain values for _all_ of the require attributes for a vendor_item, in order for the request to be successful.
+   - Sample request:
+     ```
+     PUT /api/v1/users/1/vendor_items/1
+     Content-Type: application/json
+     Accept: application/json
+     Authorization: "Bearer <JSON Web Token>"
+
+     {
+      "price": 13333,
+      "unit": "lb",
+      "description": "lb of very special berries"
+     }
+     ```
+   - Sample response body: `status: 200`
+
+     ![sample vendor_item create response](./readme_imgs/vendor_item_update_response.png)
+
 ### Contributing:
 
 In order to contribute, please fork this repo, then clone your new repo and create a branch for your feature.

@@ -28,9 +28,9 @@ private
     end
   end
 
-    def attempt_update_vendor_item(vendor_item)
+  def attempt_update_vendor_item(vendor_item)
     if vendor_item.update(update_vendor_item_params)
-      render json: VendorItemSerializer.new(vendor_item), status: 201
+      render json: VendorItemSerializer.new(vendor_item), status: 200
     else
       render json: {"Error": "Something went wrong!"}, status: 422
     end

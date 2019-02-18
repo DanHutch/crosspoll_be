@@ -43,7 +43,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
       description: "lb of very special berries"
       }, headers: {"Authorization" => "Bearer #{@token}"}
 
-    expect(response.status).to eq(201)
+    expect(response.status).to eq(200)
 
     vendor_item = JSON.parse(response.body)
 
