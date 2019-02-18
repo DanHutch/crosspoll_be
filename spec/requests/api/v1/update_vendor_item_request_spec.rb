@@ -37,7 +37,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
     expect(@vendor_item_1.price).to eq(1100)
     expect(@vendor_item_1.description).to eq("lb of berries")
 
-    put "/api/v1/users/1/vendor_items/1", params: {
+    put "/api/v1/vendor_items/1", params: {
       price: 900,
       unit: "lb",
       description: "lb of very special berries"
@@ -66,7 +66,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
   end
 
   it "should not update a vendor_item for an un-authenticated request" do
-    put "/api/v1/users/1/vendor_items/1", params: {
+    put "/api/v1/vendor_items/1", params: {
       price: 200,
       unit: "lb",
       description: "lb of berries"
@@ -78,7 +78,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
     expect(message).to have_key("Error")
     expect(message["Error"]).to eq("Authentication Failed")
 
-    put "/api/v1/users/1/vendor_items/1", params: {
+    put "/api/v1/vendor_items/1", params: {
       price: 400,
       unit: "lb",
       description: "lb of berries"
@@ -92,7 +92,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
   end
 
   it "should not update vendor_item with missing attributes" do
-    put "/api/v1/users/1/vendor_items/1", params: {
+    put "/api/v1/vendor_items/1", params: {
       price: nil,
       unit: "lb",
       description: "lb of berries"
@@ -103,7 +103,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
     expect(message).to have_key("Error")
     expect(message["Error"]).to eq("Something went wrong!")
 
-    put "/api/v1/users/1/vendor_items/1", params: {
+    put "/api/v1/vendor_items/1", params: {
       price: 1000,
       unit: nil,
       description: "lb of berries"
@@ -114,7 +114,7 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
     expect(message).to have_key("Error")
     expect(message["Error"]).to eq("Something went wrong!")
 
-    put "/api/v1/users/1/vendor_items/1", params: {
+    put "/api/v1/vendor_items/1", params: {
       item_id: 1,
       price: 1000,
       unit: "lb",

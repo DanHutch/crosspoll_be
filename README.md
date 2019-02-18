@@ -128,11 +128,11 @@ The Authentication endpoint responds to successful POST requests by sending back
 
 5. **Adding a Vendor_Item**
    - Method: `POST`
-   - URI: `/api/v1/users/:user_id/vendor_items`
-   - This endpoint allows an authenticated user to create a new vendor_item. It creates a new vendor_item from the `item_id` specified
+   - URI: `/api/v1/vendor_items`
+   - This endpoint allows an authenticated user to create a new vendor_item. It creates a new vendor_item from the `item_id` specified in the JSON body of the request, along with the user's ID included in the JWT in the Authorization header of the request.
    - Sample request:
      ```
-     POST /api/v1/users/1/vendor_items
+     POST /api/v1/vendor_items
      Content-Type: application/json
      Accept: application/json
      Authorization: "Bearer <JSON Web Token>"
@@ -150,11 +150,11 @@ The Authentication endpoint responds to successful POST requests by sending back
 
 5. **Updating a Vendor_Item**
    - Method: `PUT`
-   - URI: `/api/v1/users/:user_id/vendor_items/:vendor_item_id`
+   - URI: `/api/v1/vendor_items/:vendor_item_id`
    - This endpoint allows an authenticated user to update one of their existing vendor_items. It updates the vendor_item with the `:vendor_item_id` specified in the URL. The JSON-formatted request body _must_ contain values for _all_ of the require attributes for a vendor_item, in order for the request to be successful.
    - Sample request:
      ```
-     PUT /api/v1/users/1/vendor_items/1
+     PUT /api/v1/vendor_items/1
      Content-Type: application/json
      Accept: application/json
      Authorization: "Bearer <JSON Web Token>"
