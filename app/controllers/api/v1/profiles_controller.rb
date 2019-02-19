@@ -7,7 +7,7 @@ class Api::V1::ProfilesController < ApplicationController
   end
 
   def update
-    User.find(current_user.id).update(update_params)
+    attempt_update
   end
 
 private
@@ -36,6 +36,14 @@ private
   
   def update_params
     params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password)
+  end
+
+  def attempt_update 
+    if current_user.update(update_params)
+      render json: UserSerializer.new(current_user), status: 200
+    else 
+      something_went_wrong
+    end
   end
 
 end
