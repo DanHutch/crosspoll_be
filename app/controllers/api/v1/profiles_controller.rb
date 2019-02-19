@@ -19,7 +19,7 @@ private
 
   def attempt_save_user(user_item)
     if user_item.save
-      render json: UserSerializer.new(user_item), status: 201
+      render json: payload(user_item), status: 201
     else
       something_went_wrong
     end

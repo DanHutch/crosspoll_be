@@ -22,24 +22,10 @@ describe "POST /registration API" do
 
     new_user = JSON.parse(response.body)
 
-    expect(new_user).to have_key("data")
-    expect(new_user["data"]).to have_key("id")
-    expect(new_user["data"]).to have_key("type")
-    expect(new_user["data"]["type"]).to eq("user")
-    expect(new_user["data"]).to have_key("attributes")
-    expect(new_user["data"]["attributes"]).to have_key("name")
-    expect(new_user["data"]["attributes"]).to have_key("account_type")
-    expect(new_user["data"]["attributes"]).to have_key("address")
-    expect(new_user["data"]["attributes"]).to have_key("city")
-    expect(new_user["data"]["attributes"]).to have_key("state")
-    expect(new_user["data"]["attributes"]).to have_key("zip")
-    expect(new_user["data"]["attributes"]).to have_key("email")
-    expect(new_user["data"]["attributes"]).to have_key("phone")
-    expect(new_user["data"]["attributes"]).to have_key("lat")
-    expect(new_user["data"]["attributes"]).to have_key("long")
-    expect(new_user["data"]["attributes"]).to have_key("bio")
-    expect(new_user["data"]["attributes"]).to have_key("img_url")
-    expect(new_user["data"]["attributes"]).to have_key("products")
+    expect(new_user).to have_key("auth_token")
+    expect(new_user).to have_key("user")
+    expect(new_user["user"]).to have_key("id")
+    expect(new_user["user"]).to have_key("email")
   end
 
   it "should not register a new user with missing attributes" do

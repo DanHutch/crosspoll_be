@@ -104,10 +104,39 @@ If done properly, you should now be able to run the local test suite using the c
 
      ![sample user show response](./readme_imgs/search_response.png)
 
+**4. Registration**
+   - Method: `POST`
+   - URI: `/api/v1/registration`
+   - This endpoint takes in new User registration data and, if successful, returns a JSON Web Token for the newly created user. All attributes except for the optional `"img_url"` must be present and `"password"` must match `"password_confirmation"` in order for a request to be successful. If an email already in use, in the database, is found in the `"email"` attribute, the request will not be successful.
+   - Sample request:
+     ```
+     POST /api/v1/registration
+     Content-Type: application/json
+     Accept: application/json
+
+    {
+      "name": "The Potatoe Bros",
+      "account_type": "vendor",
+      "address": "3655 Wyandot St",
+      "city": "denver",
+      "state": "CO",
+      "phone": 2313414141,
+      "zip": 80211,
+      "email": "merchant100@email.com",
+      "bio": "A place to get potatoes",
+      "password": "user_1",
+      "password_confirmation": "user_1"
+    }
+     ```
+   - Sample response body: `status: 201`
+
+
+     ![sample user registration response](./readme_imgs/reg_response.png)
+
 #### _Authenticated Endpoints_
 The Authentication endpoint responds to successful POST requests by sending back a JSON Web Token. This JWT must be included in the `Authorization` header of requests to all other authenticated endpoints.
 
-4. **Authentication**
+**5. Authentication**
    - Method: `POST`
    - URI: `/api/v1/authentication`
    - This endpoint allows user login (creation of a JSON Web Token) by sending a valid user `email:` and `password:` in the body of a `post` request. If successful, it sends back a JSON Web Token in the `"auth_token"` key of the response body, along with the user's `id` and `email`.
@@ -126,7 +155,7 @@ The Authentication endpoint responds to successful POST requests by sending back
 
      ![sample authentication response](./readme_imgs/authentication_response.png)
 
-5. **Adding a Vendor_Item**
+**6. Adding a Vendor_Item**
    - Method: `POST`
    - URI: `/api/v1/vendor_items`
    - This endpoint allows an authenticated user to create a new vendor_item. It creates a new vendor_item from the `item_id` specified in the JSON body of the request, along with the user's ID included in the JWT in the Authorization header of the request.
@@ -148,7 +177,7 @@ The Authentication endpoint responds to successful POST requests by sending back
 
      ![sample vendor_item create response](./readme_imgs/vendor_item_create_response.png)
 
-5. **Updating a Vendor_Item**
+**7. Updating a Vendor_Item**
    - Method: `PUT`
    - URI: `/api/v1/vendor_items/:vendor_item_id`
    - This endpoint allows an authenticated user to update one of their existing vendor_items. It updates the vendor_item with the `:vendor_item_id` specified in the URL. The JSON-formatted request body _must_ contain values for _all_ of the require attributes for a vendor_item, in order for the request to be successful.
