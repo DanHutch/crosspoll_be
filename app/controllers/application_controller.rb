@@ -7,6 +7,14 @@ class ApplicationController < ActionController::API
   #   end
   # end
 
+  def payload(user)
+    return nil unless user && user.id
+    {
+      auth_token: JsonWebToken.encode({user_id: user.id}),
+      user: {id: user.id, email: user.email}
+    }
+  end
+
 protected
 
   def authenticate_request!

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
       get '/search', to: "search#index"
 
+      post '/registration', to: "profiles#create"
+
       post '/authentication', to: "authentication#create"
 
       post '/vendor_items', to: "vendor_items#create"
