@@ -228,7 +228,7 @@ The Authentication endpoint responds to successful POST requests by sending back
     ```
    - Sample response body: `status: 200`
 
-     ![sample user update response](./readme_imgs/user_update_response.png)
+     ![sample user update response](./readme_imgs/edit_profile.png)
 
 ### Contributing:
 
