@@ -29,7 +29,23 @@ describe "Authenticated  API" do
 
       params = "email=#{email}&password=#{password}"
 
-      put "/api/v1/profiles?#{params}"
+      post "/api/v1/authentication?#{params}"
+      message = JSON.parse(response.body)
+      @token = message["auth_token"]
+
+      put "/api/v1/edit_profile/1", params: {
+        name: "The Potatoe Bros",
+        account_type: 0,
+        address: "3655 Wyandot St",
+        city: "denver",
+        state: "CO",
+        phone: 2313414141,
+        zip: 80211,
+        email: "merchant1@email.com",
+        bio: "A place to get THE BEST potatoes",
+        password: "user_1",
+        password_confirmation: "user_1"
+        }, headers: {"Authorization" => "Bearer #{@token}"}
 
       expect(response).to be_successful
       expect(response.status).to eq(200)

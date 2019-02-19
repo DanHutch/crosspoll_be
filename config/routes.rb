@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
       post '/vendor_items', to: "vendor_items#create"
       put '/vendor_items/:vendor_item_id', to: "vendor_items#update"
+
+      put '/edit_profile/:user_id', to: "profile#update"
     end
   end
 end
