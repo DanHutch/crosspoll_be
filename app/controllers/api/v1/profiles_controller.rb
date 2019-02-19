@@ -1,8 +1,13 @@
 class Api::V1::ProfilesController < ApplicationController
   before_action :validate_password, only: [:create, :update]
+  before_action :authenticate_request!, only: [:update]
 
   def create
     attempt_save_user(User.new(registration_params))
+  end
+
+  def update
+    User.find(current_user.id).update(update_params)
   end
 
 private
@@ -27,6 +32,10 @@ private
 
   def something_went_wrong
     render json: {"Error": "Something went wrong!"}, status: 422
+  end
+  
+  def update_params
+    params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password)
   end
 
 end

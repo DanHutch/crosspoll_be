@@ -20,9 +20,9 @@ describe "Authenticated  API" do
     )
   end
 
-  describe "Authentication create / login endpoint" do
+  describe "Edit Profile Endpoint" do
 
-    it "should update a update a users information" do
+    it "should a update a users information" do
 
       email = @user.email
       password = @user.password
@@ -33,9 +33,9 @@ describe "Authenticated  API" do
       message = JSON.parse(response.body)
       @token = message["auth_token"]
 
-      put "/api/v1/edit_profile/1", params: {
+      put "/api/v1/edit_profile", params: {
         name: "The Potatoe Bros",
-        account_type: 0,
+        account_type: 'vendor',
         address: "3655 Wyandot St",
         city: "denver",
         state: "CO",
@@ -48,15 +48,8 @@ describe "Authenticated  API" do
         }, headers: {"Authorization" => "Bearer #{@token}"}
 
       expect(response).to be_successful
-      expect(response.status).to eq(200)
-
-      message = JSON.parse(response.body)
-      expect(message).to have_key("auth_token")
-      expect(message).to have_key("user")
-      expect(message["user"]).to have_key("id")
-      expect(message["user"]["id"]).to eq(@user.id)
-      expect(message["user"]).to have_key("email")
-      expect(message["user"]["email"]).to eq(@user.email)
+      expect(response.status).to eq(204)
+      expect(User.last.bio).to eq("A place to get THE BEST potatoes")
     end
   end
 end
