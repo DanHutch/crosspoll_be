@@ -1,12 +1,6 @@
 class ApplicationController < ActionController::API
   attr_reader :current_user
 
-  # def validate_password
-  #   unless params[:password] == params[:password_confirmation]
-  #     render json: "Something went wrong!", status: 422
-  #   end
-  # end
-
   def payload(user)
     return nil unless user && user.id
     {
@@ -24,7 +18,7 @@ protected
     end
     @current_user = User.find(auth_token[:user_id])
     rescue JWT::VerificationError, JWT::DecodeError
-      render json: { Error: "Authentication Failed" }, status: :unauthorized
+      render json: { Error: "Invalid Authentication" }, status: :unauthorized
   end
 
 private
