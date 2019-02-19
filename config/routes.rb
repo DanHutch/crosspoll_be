@@ -14,7 +14,10 @@ Rails.application.routes.draw do
       post '/authentication', to: "authentication#create"
 
       post '/vendor_items', to: "vendor_items#create"
+      
       put '/vendor_items/:vendor_item_id', to: "vendor_items#update"
+
+      put '/edit_profile', to: "profiles#update"
     end
   end
 end

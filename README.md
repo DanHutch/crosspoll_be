@@ -198,6 +198,38 @@ The Authentication endpoint responds to successful POST requests by sending back
 
      ![sample vendor_item create response](./readme_imgs/vendor_item_update_response.png)
 
+
+
+**8. Updating a User**
+   - Method: `PUT`
+   - URI: `/api/v1/edit_profile`
+   - This endpoint allows an authenticated user to update their information. It updates the current user as  specified by the user id in the JSON Web Token. The JSON-formatted request body _must_ contain values for _all_ of the require attributes for a user, including `"password:"` and matching `"password_confirmation:"` in order for the request to be successful.
+   - Sample request:
+     ```
+     PUT /api/v1/edit_profile
+     Content-Type: application/json
+     Accept: application/json
+     Authorization: "Bearer <JSON Web Token>"
+    
+    ```
+    {      
+      name: "The Potatoe Bros",
+      account_type: 'vendor',
+      address: "3655 Wyandot St",
+      city: "denver",
+      state: "CO",
+      phone: 2313414141,
+      zip: 80211,
+      email: "merchant1@email.com",
+      bio: "A place to get THE Biggest potatoes",
+      password: "user_1",
+      password_confirmation: "user_1"
+    }
+    ```
+   - Sample response body: `status: 200`
+
+     ![sample user update response](./readme_imgs/edit_profile.png)
+
 ### Contributing:
 
 In order to contribute, please fork this repo, then clone your new repo and create a branch for your feature.
