@@ -1,11 +1,9 @@
 class ApplicationController < ActionController::API
   attr_reader :current_user
 
-  # def validate_password
-  #   unless params[:password] == params[:password_confirmation]
-  #     render json: "Something went wrong!", status: 422
-  #   end
-  # end
+  def something_went_wrong
+    render json: {"Error": "Something went wrong!"}, status: 422
+  end
 
   def payload(user)
     return nil unless user && user.id
@@ -14,6 +12,19 @@ class ApplicationController < ActionController::API
       user: {id: user.id, email: user.email}
     }
   end
+
+  def render_vendor_item(vendor_item, status = 200)
+    render json: VendorItemSerializer.new(vendor_item), status: status
+  end
+
+  def render_vendor(vendor)
+    render json: VendorSerializer.new(vendor)
+  end
+
+  def render_user(user, status = 200)
+    render json: UserSerializer.new(user), status: status
+  end
+
 
 protected
 

@@ -28,6 +28,18 @@ class User < ApplicationRecord
 
   enum account_type: [:vendor, :customer]
 
+  def self.all_vendors
+    User.where('account_type = ?', 0)
+  end
+
+  def self.vendor_search_with_item(item_id, range, location)
+    Item.find(item_id).users.within(range, :origin => location).where('account_type = ?', 0)
+  end
+
+  def self.vendor_search_without_item(range, location)
+      User.within(range, :origin => location).where('account_type = ?', 0)
+  end
+
 private
 
   def geocode_address

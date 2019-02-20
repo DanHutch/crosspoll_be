@@ -1,12 +1,17 @@
 class Api::V1::SearchController < ApplicationController
 
   def index
-    if !params["item"]
-      render json: VendorSerializer.new(User.within(params["range"], :origin => params["loc"]).where('account_type = ?', 0))
-    elsif params["item"]
-      render json: VendorSerializer.new(Item.find(params["item"]).users.within(params["range"], :origin => params["loc"]).where('account_type = ?', 0))
-    end
+    params["item"] ? render_vendor(with_item) : render_vendor(without_item)
   end
 
+private
+
+  def without_item
+    User.vendor_search_without_item(params["range"], params["loc"])
+  end
+
+  def with_item
+    User.vendor_search_with_item(params["item"], params[:range], params["loc"])
+  end
 
 end

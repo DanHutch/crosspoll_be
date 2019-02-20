@@ -1,7 +1,7 @@
 class Api::V1::VendorsController < ApplicationController
 
-def index
-  render json: VendorSerializer.new(User.where('account_type = ?', 0))
-end
+  def index
+    render_vendor(User.all_vendors)
+  end
 
 end
