@@ -11,11 +11,7 @@ private
   end
 
   def try_sign_in(user)
-    if user.authenticate(params[:password])
-      render json: payload(user)
-    else
-      render json: {Errors: "Login Failed"}, status: 401
-    end
+    user.authenticate(params[:password]) ? render(json: payload(user)) : render(json: {Errors: "Login Failed"}, status: 401)
   end
 
 end
