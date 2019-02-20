@@ -65,6 +65,25 @@ describe "PUT users/:user_id/vendor_items/:vendor_item_id API" do
 
   end
 
+  it "should not update a vendor_item for an request with an altered JWT" do
+
+    allow_any_instance_of(ApplicationController).to receive(:http_token).and_return("12345")
+
+    allow(JsonWebToken).to receive(:decode).with("12345").and_raise(JWT::VerificationError)
+
+    put "/api/v1/vendor_items/1", params: {
+      price: 200,
+      unit: "lb",
+      description: "lb of berries"
+      }, headers: {"Authorization" => "BadToken"}
+
+    expect(response.status).to eq(401)
+
+    message = JSON.parse(response.body)
+    expect(message).to have_key("Error")
+    expect(message["Error"]).to eq("Invalid Authentication")
+  end
+
   it "should not update a vendor_item for an un-authenticated request" do
     put "/api/v1/vendor_items/1", params: {
       price: 200,

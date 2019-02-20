@@ -35,7 +35,7 @@ protected
     end
     @current_user = User.find(auth_token[:user_id])
     rescue JWT::VerificationError, JWT::DecodeError
-      render json: { Error: "Authentication Failed" }, status: :unauthorized
+      render json: { Error: "Invalid Authentication" }, status: :unauthorized
   end
 
 private
