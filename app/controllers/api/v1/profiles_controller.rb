@@ -30,18 +30,14 @@ private
     end
   end
 
-  def something_went_wrong
-    render json: {"Error": "Something went wrong!"}, status: 422
-  end
-  
   def update_params
     params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password)
   end
 
-  def attempt_update 
+  def attempt_update
     if current_user.update(update_params)
-      render json: UserSerializer.new(current_user), status: 200
-    else 
+      render_user(current_user)
+    else
       something_went_wrong
     end
   end

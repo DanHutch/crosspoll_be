@@ -6,7 +6,6 @@ class Api::V1::VendorItemsController < ApplicationController
   end
 
   def update
-
     attempt_update_vendor_item(current_user.vendor_items.find(params[:vendor_item_id]))
   end
 
@@ -21,19 +20,11 @@ private
   end
 
   def attempt_save_vendor_item(vendor_item)
-    if vendor_item.save
-      render json: VendorItemSerializer.new(vendor_item), status: 201
-    else
-      render json: {"Error": "Something went wrong!"}, status: 422
-    end
+    vendor_item.save ? render_vendor_item(vendor_item, 201) : something_went_wrong
   end
 
   def attempt_update_vendor_item(vendor_item)
-    if vendor_item.update(update_vendor_item_params)
-      render json: VendorItemSerializer.new(vendor_item), status: 200
-    else
-      render json: {"Error": "Something went wrong!"}, status: 422
-    end
+    vendor_item.update(update_vendor_item_params) ? render_vendor_item(vendor_item, 200) : something_went_wrong
   end
 
 end
