@@ -25,7 +25,6 @@ class ApplicationController < ActionController::API
     render json: UserSerializer.new(user), status: status
   end
 
-
 protected
 
   def authenticate_request!

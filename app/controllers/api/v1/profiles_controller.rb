@@ -1,5 +1,7 @@
 class Api::V1::ProfilesController < ApplicationController
+
   before_action :validate_password, only: [:create, :update]
+
   before_action :authenticate_request!, only: [:update]
 
   def create
@@ -23,11 +25,7 @@ private
   end
 
   def attempt_save_user(user_item)
-    if user_item.save
-      render json: payload(user_item), status: 201
-    else
-      something_went_wrong
-    end
+    user_item.save ? render(json: payload(user_item), status: 201) : something_went_wrong
   end
 
   def update_params
@@ -35,11 +33,7 @@ private
   end
 
   def attempt_update
-    if current_user.update(update_params)
-      render_user(current_user)
-    else
-      something_went_wrong
-    end
+    current_user.update(update_params) ? render_user(current_user) : something_went_wrong
   end
 
 end
