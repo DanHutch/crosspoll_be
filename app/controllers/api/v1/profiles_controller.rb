@@ -21,7 +21,7 @@ private
   end
 
   def registration_params
-    params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password, :password_confirmation)
+    params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password, :password_confirmation, :img_url)
   end
 
   def attempt_save_user(user_item)
@@ -29,7 +29,7 @@ private
   end
 
   def update_params
-    params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password)
+    params.permit(:name, :account_type, :address, :city, :state, :phone, :zip, :email, :bio, :password, :img_url)
   end
 
   def attempt_update
